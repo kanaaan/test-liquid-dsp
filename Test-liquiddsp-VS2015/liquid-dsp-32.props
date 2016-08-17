@@ -8,6 +8,11 @@
       <AdditionalLibraryDirectories>$(LocalDebuggerWorkingDirectory)lib\liquid-dsp\msvc\32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libliquid.lib;</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>copy  "$(ProjectDir)lib\liquid-dsp\msvc\32\libliquid.dll" "$(OutDir)libliquid.dll"
+copy  "$(ProjectDir)lib\libgcc_s_dw2-1.dll" "$(OutDir)libgcc_s_dw2-1.dll"
+</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>
